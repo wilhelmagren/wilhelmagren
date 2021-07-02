@@ -11,6 +11,8 @@
   - Superflight,                      current %:   0/24
   - Trine Enchanted Edition,          current %:   0/33
   - The Walking Dead: Michonne,       current %:   0/21
-  - 
-
+  - Firewatch,                        current %:   0/10
+  - Subnautica,                       current %:   0/17
+  -
+  -
 
