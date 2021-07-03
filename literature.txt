@@ -2,6 +2,11 @@
 ## NOT READ:
 
 ## READ:
+  -
+  -
+  -
+  -
+  -
 
 
 # Music generation/creation with LSTMs
@@ -28,4 +33,9 @@
             specify what octave the given note is played at. One bit designates if the previous note played is to be sustained, i.e. not 
             played anew. And one final bit represents a rest, i.e. no note is played nor sustained!
 
+  - "GRUV: Algorithmic Music Generation using Recurrent Neural Networks" by Aran Nayebi & Matt Vitelli
+    in UNKNOWN CONEFERENCE/PROCEEDING. DONT KNOW WHEN PUBLISHED.
+    NOTES:  First thoughts were that the report overall were rather shallow. No specifics on model architectures, except for theoretical explanations.
+            Gained some insight in how to verify what the RNN is actually learning. Take some sample from validation data set,
+            visualize true frequency bandwidth and compare to generated sequence. Spectograms. 
 
