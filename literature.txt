@@ -1,0 +1,31 @@
+# Deep Learning for Chess
+## NOT READ:
+
+## READ:
+
+
+# Music generation/creation with LSTMs
+## NOT READ:
+
+## READ:
+  - "Generating Musical Expression of MIDI Music with LSTM Neural Network" by Maria Klara Jędrzejewska et al. 
+    in the 2018 11th International Conference on Human System Interaction (HSI)
+    NOTES:  Interesting approach to 'creating' musical expression through Deep Learning. Data representation was a bit unclear,
+            read again if try to implement. Great results, showing the true expressive power of deep neural networks!
+ 
+  - "Generating Music using an LSTM Network" by Nikhil Kotecha & Paul Young
+    from arXiv, Columbia University. Submitted on 18th of April 2018.
+    NOTES:  Not to insightful; results rather unclear and 3.2 Software Design was cluttered with strange pseudocode. The so called
+            'Note State Matrix' was an interesting approach to representing the music. It represents the states 'play' and 'articulate'
+            for each note during each time step over a set time period. 
+
+  - "Learning to Create Jazz Melodies Using Deep Belief Nets" by Greg Bickerman et al.
+    in UNKNOWN CONFERENCE/PROCEEDING. Published in January 2010. FIND SOMETHING MORE RECENT ON RESTRICTED BOLTZMANN MACHINES (RBMs) AND MUSIC.
+    NOTES:  Insightful explanation of the data representation. Similar approach to what I had planned out, but smarter!
+            Each beat is divied into a number of subdivisions, 'slots', dynamically changing depending on the smallest note duration to be
+            represented. Each 'slot' contains 30 bits, 12 chord bits and 18 melody bits. The chord bits are one-hot encoded representation of
+            all possible half-tones on the keyboard, i.e. the chromatic pitch classes from natural C to natural B. Four bits are used to 
+            specify what octave the given note is played at. One bit designates if the previous note played is to be sustained, i.e. not 
+            played anew. And one final bit represents a rest, i.e. no note is played nor sustained!
+
+
