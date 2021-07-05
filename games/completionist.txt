@@ -1,5 +1,4 @@
 # Games to complete this summer
-  - ISLANDERS,                        current %:  18/26
   - Fallout: New Vegas,               current %:  60/75
   - Batman - The Telltale Series,     current %:   0/30
   - Brothers - A Tale of Two Sons,    current %:   0/12
@@ -14,5 +13,7 @@
   - Firewatch,                        current %:   0/10
   - Subnautica,                       current %:   0/17
   -
-  -
 
+# Games completed this summer
+  - ISLANDERS,
+  - 
