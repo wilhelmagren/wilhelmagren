@@ -1,4 +1,6 @@
 alias alacritty='LIBGL_ALWAYS_SOFTWARE=1 alacritty'
-alias clearneo='clear && neofetch'
+alias neoc='clear && echo "" && neofetch'
 alias ls='ls --color=auto'
 alias ll='ls -la'
+alias py='python3'
+alias python='python3'

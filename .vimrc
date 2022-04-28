@@ -8,9 +8,9 @@ set term=xterm-256color
 "# This also follows the PIP 8 convention
 syntax on
 set number
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set textwidth=79
 set expandtab
 set autoindent
@@ -30,11 +30,6 @@ set foldlevel=99
 nnoremap <space> za
 
 "# set the colorscheme, se ~/.vim/colors/ for available colorschemes
-"# autocmd vimenter * ++nested colorscheme gruvbox
-"# set background=dark
-"# let g:gruvbox_contrast_dark='medium'
-
 call plug#begin('~/.vim/plugged')
-"# Plug 'morhetz/gruvbox'
 
 call plug#end()
