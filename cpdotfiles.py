@@ -1,11 +1,4 @@
 #!/usr/bin/python3
-# copy the dotfiles from my profile repository to the home directory
-# after this, some things still have to be properly set up:
-#   1) vim-plugged
-#      - https://github.com/junegunn/vim-plug
-#      - curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-#        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-#
 import sys
 import os
 import shutil
