@@ -57,4 +57,4 @@ set background=dark
 let g:gruvbox_contrast_dark='soft'
 let g:gruvbox_contrast_light='hard'
 let g:airline_powerline_fonts=1
-let g:airline_theme='gruvbox'
+let g:airline_theme='base16_default'
