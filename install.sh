@@ -44,14 +44,18 @@ echo "Creating symlinks as device $DEVICE..."
 
 mkdir -p "$HOME/.config"
 
-dotfiles=".bashrc .bash_aliases .tmux.conf .config/nvim .config/alacritty"
-for dotfile in $dotfiles; do
-    create_home_symlink "$dotfile"
-done
-
+# Install vim-plug, if not already installed on the system.
 PLUG_PATH=${HOME}/.config/nvim/autoload/plug.vim
 if [ ! -f "$PLUG_PATH" ]; then
     echo "Installing vim-plug..."
     curl -fLo "$PLUG_PATH" --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 fi
+
+# Install starship prompt, if not not already installed on the system.
+curl -sS https://starship.rs/install.sh | sh
+
+dotfiles=".bashrc .bash_aliases .tmux.conf .config/nvim .config/alacritty .config/starship.toml"
+for dotfile in $dotfiles; do
+    create_home_symlink "$dotfile"
+done
 
