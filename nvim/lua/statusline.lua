@@ -1,6 +1,6 @@
 -- Configure the statusline.
 require('lualine').setup({
-    icons_enabled = true,
+    icons_enabled = false,
     theme = 'onedark',
     sections = {
         lualine_b = { 'filename' },
@@ -8,4 +8,3 @@ require('lualine').setup({
         lualine_y = { 'diagnostics' },
     },
 })
-

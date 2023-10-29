@@ -1,7 +1,7 @@
--- Install ``packer`` if not already installed.
+-- Install `packer.nvim` if not already installed.
 -- https://github.com/wbthomason/packer.nvim
 local ensure_packer = function()
-	local fn = vim.fn
+    local fn = vim.fn
 	local path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
 	if fn.empty(fn.glob(path)) > 0 then
 		fn.system({
@@ -20,26 +20,24 @@ end
 
 local packer_bootstrap = ensure_packer()
 
-return require('packer').startup( function(use)
+return require('packer').startup(function(use)
+
     -- Packer can install itself.
     use('wbthomason/packer.nvim')
 
-    -- Statusline
-    use('nvim-lualine/lualine.nvim')
-
-    -- Colorscheme
-    use('navarasu/onedark.nvim')
-
-    -- Syntax highlighting
+    -- Proper syntax highlighting.
     use({
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate',
     })
 
+    -- Statusline.
+    use('nvim-lualine/lualine.nvim')
+
+    -- Colorscheme
+    use('navarasu/onedark.nvim')
+
     if packer_bootstrap then
 	    require('packer').sync()
     end
-
-end
-)
-
+end)
