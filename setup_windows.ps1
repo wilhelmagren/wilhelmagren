@@ -16,38 +16,47 @@ if ( $executionPolicy -eq "Restricted" )
 
 Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
 
+choco feature enable -n=allowGlobalConfirmation
+
 #
 # Install `git` version control.
 # Thank you Linus Torvalds.
 #
-choco install git --yes
+choco install git
 refreshenv
 
 #
 # Install `posh-git`, the PowerShell environment for git.
 # Enables tab-completion and output highlighting.
 #
-choco install poshgit --yes
+choco install poshgit
 refreshenv
 
 #
 # Install `Neovim`.
 #
-choco install neovim --yes
+choco install neovim
 refreshenv
 
 #
 # Install `Python3.x` (the latest version available),
 # and some required libraries+scripts needed later.
 #
-choco install python3 --yes
+choco install python3
 refreshenv
 python -m pip install virtualenv
 
 #
 # Install `LLVM` and `Clang`.
 #
-choco install llvm --yes
+choco install llvm
+refreshenv
+
+#
+# Install `OpenJDK` and `Java Runtime`.
+#
+choco install openjdk
+choco install javaruntime
 refreshenv
 
 #
