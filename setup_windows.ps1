@@ -6,7 +6,7 @@
 #
 
 $executionPolicy = Get-ExecutionPolicy
-if ( $executionPolicy == "Restricted" )
+if ( $executionPolicy -eq "Restricted" )
 {
     Write-Output "ExecutionPolicy was Restricted, changing to AllSigned"
     Set-ExecutionPolicy AllSigned
