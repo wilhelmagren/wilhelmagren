@@ -47,6 +47,15 @@ refreshenv
 python -m pip install virtualenv
 
 #
+# Install `poetry`.
+#
+(Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+C:\Users\wille\AppData\Roaming\pypoetry\venv\Scripts\
+$poetry_home = Join-Path -Path $env:APPDATA -ChildPath "pypoetry\venv\Scripts\"
+$path_vars = $env:PATH + "$poetry_home;"
+[Environment]::SetEnvironmentVariable("PATH", $path_vars, "User")
+
+#
 # Install `LLVM` and `Clang`.
 #
 choco install llvm

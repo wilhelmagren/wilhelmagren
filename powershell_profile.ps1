@@ -25,3 +25,6 @@ Set-Alias -Name "gits" -Value GITSTATUS
 Set-Alias -Name "gitd" -Value GITDIFF
 
 Set-Alias -Name "python3" -Value python
+
+# Allow using `refreshenv` command.
+Import-Module $env:ChocolateyInstall\helpers\chocolateyProfile.psm1
