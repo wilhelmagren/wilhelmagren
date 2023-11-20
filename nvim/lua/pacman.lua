@@ -31,10 +31,32 @@ return require('packer').startup(function(use)
         run = ':TSUpdate',
     })
 
+    -- Autocompletion and snippets.
+    use('hrsh7th/nvim-cmp')
+    use('hrsh7th/cmp-nvim-lsp')
+    use('L3MON4D3/LuaSnip')
+
+    -- Language Server Protocol functionality.
+    use('williamboman/mason.nvim')
+    use('williamboman/mason-lspconfig.nvim')
+    use('neovim/nvim-lspconfig')
+
+    -- File system explorer.
+    use({
+        'nvim-tree/nvim-tree.lua',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+    })
+
+    -- Fuzzy finder.
+    use({
+        'nvim-telescope/telescope.nvim',
+        requires = { 'nvim-lua/plenary.nvim' },
+    })
+
     -- Statusline.
     use('nvim-lualine/lualine.nvim')
 
-    -- Colorscheme
+    -- Colorscheme.
     use('navarasu/onedark.nvim')
 
     if packer_bootstrap then

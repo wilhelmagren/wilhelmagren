@@ -1,7 +1,11 @@
--- Load package manager and plugins.
+-- Load `nvim-packer` and all plugins.
 require('pacman')
 require('colorscheme')
+require('explorer')
+require('lsp')
+require('completions')
 require('statusline')
+require('telescope')
 require('treesitter')
 
 -- Enable relative line numbers.
@@ -20,3 +24,8 @@ vim.opt.textwidth = 90
 
 -- Set the offset for when buffer starts moving.
 vim.opt.scrolloff = 12
+
+-- Always open `nvim-tree` file explorer at start.
+open_tree()
+
+vim.keymap.set('', '<M-e>', toggle_tree)
