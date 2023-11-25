@@ -7,6 +7,7 @@ require('completions')
 require('statusline')
 require('telescope')
 require('treesitter')
+require('greeter')
 
 -- Enable relative line numbers.
 vim.opt.relativenumber = true
@@ -24,8 +25,5 @@ vim.opt.textwidth = 90
 
 -- Set the offset for when buffer starts moving.
 vim.opt.scrolloff = 12
-
--- Always open `nvim-tree` file explorer at start.
-open_tree()
 
 vim.keymap.set('', '<M-e>', toggle_tree)

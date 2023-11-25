@@ -59,6 +59,12 @@ return require('packer').startup(function(use)
     -- Colorscheme.
     use('navarasu/onedark.nvim')
 
+    -- Greeter.
+    use({
+        'goolord/alpha-nvim',
+        requires = { 'nvim-tree/nvim-web-devicons' },
+    })
+
     if packer_bootstrap then
 	    require('packer').sync()
     end
