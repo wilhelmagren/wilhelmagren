@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
- printf "\nInstalling neovim proprietary drivers...\n"
+printf "+--------------------------------------------------------------------+\n"
+printf "|                       MANJARO LINUX DEV SETUP                      |\n"
+printf "+--------------------------------------------------------------------+\n"
+
+ printf "\nInstalling nvidia proprietary drivers...\n"
  sudo pacman -Syu
  sudo mhwd -a pci nonfree 0300
  printf "done\n"
@@ -33,3 +37,7 @@ sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
 sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 printf "\nDone building and installing Alacritty from source!\n"
+
+printf "\nInstalling 'tmux', 'fastfetch' and 'fish'...\n"
+sudo pacman -Sy fish fastfetch tmux
+fastfetch
