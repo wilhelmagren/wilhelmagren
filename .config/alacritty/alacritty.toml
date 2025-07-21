@@ -1,3 +1,6 @@
+[terminal]
+shell = "/usr/bin/fish"
+
 [colors.bright]
 black = "#5c6370"
 blue = "#61afef"
