@@ -38,6 +38,24 @@ sudo desktop-file-install extra/linux/Alacritty.desktop
 sudo update-desktop-database
 printf "\nDone building and installing Alacritty from source!\n"
 
+pritnf "\nSetting up Python environment (pip, uv, ruff, ...)\n"
+sudo pacman -Syu python-pipx
+pipx install uv
+uv tool install ruff@latest
+print "\nDone setting up Python dev env\n"
+
+printf "\nInstalling rust-analyzer lsp...\n"
+rustup component add rust-analyzer
+printf "\nDone installing rust-analyzer lsp\n"
+
+printf "\nBuilding and installing lua lsp\n"
+mkdir -p "$HOME/git/LuaLS/lua-language-server"
+git clone https://github.com/LuaLS/lua-language-server "$HOME/git/LuaLS/lua-language-server"
+cd "$HOME/git/LuaLS/lua-language-server"
+bash make.sh
+sudo ln -s "$PWD/bin/lua-language-server" /usr/local/bin/lua-language-server
+printf "\nDone building and installing lua lsp\n"
+
 printf "\nInstalling 'tmux', 'fastfetch' and 'fish'...\n"
 sudo pacman -Sy fish fastfetch tmux
 fastfetch
