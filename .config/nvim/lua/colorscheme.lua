@@ -1,9 +1,12 @@
-require('onedark').setup({
-    style = 'warm',
-    transparent = true,
-    colors = {
-        green = '#00ffaa',
-    },
+local kanagawa = require('kanagawa')
+
+kanagawa.setup({
+  compile = false,
+  undercurl = true,
+  background = {
+    dark = 'dragon',
+  },
+  transparent = true,
 })
 
-require('onedark').load()
+kanagawa.load('dragon')

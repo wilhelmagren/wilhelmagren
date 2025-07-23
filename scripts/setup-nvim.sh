@@ -63,6 +63,7 @@ declare -A plugins=(
 declare -A colorschemes=(
     ["onedark.nvim"]="https://github.com/navarasu/onedark.nvim.git"
     ["gruvbox.nvim"]="https://github.com/ellisonleao/gruvbox.nvim.git"
+    ["kanaga.nvim"]="https://github.com/rebelot/kanagawa.nvim.git"
 )
 
 printf "\nCLONING PLUGIN REPOSITORIES...\n"
