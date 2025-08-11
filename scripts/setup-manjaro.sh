@@ -56,6 +56,13 @@ bash make.sh
 sudo ln -s "$PWD/bin/lua-language-server" /usr/local/bin/lua-language-server
 printf "\nDone building and installing lua lsp\n"
 
+printf "\nInstalling npm and nodejs... uuuuugh DISGUSTING!!!!"
+sudo pacman -S nodejs npm
+printf "\nInstalling pyright globally..."
+sudo npm install -g pyright
+pyright --version
+printf " \nOK!\n"
+
 printf "\nInstalling 'tmux', 'fastfetch' and 'fish'...\n"
 sudo pacman -Sy fish fastfetch tmux
 fastfetch
