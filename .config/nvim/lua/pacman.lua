@@ -23,7 +23,9 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
   require('colorschemes.kanagawa'),
+  -- require('colorschemes.vague'),
 
+  require('plugins.oil'),
   require('plugins.blink'),
   require('plugins.mini'),
   require('plugins.treesitter'),

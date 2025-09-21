@@ -1,5 +1,4 @@
 --[[
---
 --]]
 
 -- Set <space> as the leader key.
@@ -10,6 +9,7 @@ vim.gmaplocalleader = ' '
 
 vim.g.have_nerd_font = true
 
+require('autocmds')
 require('options')
 require('pacman')
 require('keymaps')

@@ -20,6 +20,7 @@ vim.o.breakindent = true
 
 -- Save the undo history.
 vim.o.undofile = true
+vim.o.swapfile = false
 
 -- Case-insensitive searching UNLESS '\C' or one or more capital letters in the search term.
 --  See `:help ignorecase`
@@ -42,6 +43,8 @@ vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live in another window as you type.
 vim.o.inccommand = 'split'
+vim.o.splitbelow = true -- Horizontal splits go below.
+vim.o.splitright = true -- Vertical splits go right.
 
 -- If performing an operation that would fail due to unsaved changes in the buffer
 -- (like `:q`), instead raise a dialog asking if you wish to save the current file(s).
@@ -54,3 +57,5 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.textwidth = 100
+
+vim.o.wrap = true
