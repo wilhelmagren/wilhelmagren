@@ -14,7 +14,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map('grn', vim.lsp.buf.rename, '[R]e[n]ame')
     map('gra', vim.lsp.buf.code_action, '[G]oto Code [A]ction', { 'n', 'x' })
     map('grr', builtin.lsp_references, '[G]oto [R]eferences')
-    map('gri', builtin.lsp_implementation, '[G]oto [I]mplementation')
+    map('gri', builtin.lsp_implementations, '[G]oto [I]mplementation')
     map('grd', builtin.lsp_definitions, '[G]oto [D]efinition')
     map('grt', builtin.lsp_type_definitions, '[G]oto [T]type definition')
     map('K', function()
@@ -24,21 +24,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
       vim.lsp.buf.format({ async = true })
     end, '[F]ormat')
   end,
-})
-
-vim.diagnostic.config({
-  severity_sort = true,
-  float = { border = 'rounded', source = 'if_many' },
-  underline = { severity = vim.diagnotic.severity.ERROR },
-  signs = vim.g.have_nerd_font and {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '󰅚 ',
-      [vim.diagnostic.severity.WARN] = '󰀪 ',
-      [vim.diagnostic.severity.INFO] = '󰋽 ',
-      [vim.diagnostic.severity.HINT] = '󰌶 ',
-    },
-  },
-  virtual_text = false,
 })
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
