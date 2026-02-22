@@ -1,12 +1,61 @@
-[tool.pyright]
+[project]
+name = ""
+version = ""
+description = ""
+readme = "README.md"
+requires-python = ">=3.11"
+authors = []
+dependencies = []
+
+[dependency-groups]
+dev = []
+
+
+[build-system]
+requires = ["uv_build>=0.9.5"]
+build-backend = "uv_build"
+
+
+[tool.sqlfluff.core]
+dialect = "postgres"
+templater = "placeholder"
+processes = -1
+max_line_length = 200
+large_file_skip_byte_limit = 0  # don't skip files because they are large!
+
+# Code ST05: we actively hate subqueries, they stink!
+# Code ST06: order select targets in ascending complexity
+exclude_rules = "ST05, ST06"
+
+# I enjoy screaming at my computer :)
+[tool.sqlfluff.rules.capitalisation.keywords]
+capitalization_policy = "upper"
+
+[tool.sqlfluff.templater.placeholder]
+param_style = "colon"
+
+
+[tool.basedpyright]
 venvPath = "."
 venv = ".venv"
-exclude = [".venv"]
+exclude = [".venv", "**/__pycache__", "**/test_*.py", "benches/**", "dev/**"]
+ignore = [".venv", "**/__pycache__", "**/test_*.py", "benches/**", "dev/**"]
+pythonVersion = "3.11"
+reportImplicitStringConcatenation = "none"
+reportAny = "none"
+reportExplicitAny = "none"
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = "none"
+reportIncompatibleMethodOverride = "none"
 
+
+# astral ships pretty based defaults...
+# but it's never bad to be explicit!
 [tool.ruff]
-line-length = 79
+line-length = 88
 indent-width = 4
 target-version = "py311"
+extend-exclude = ["benches/**", "dev/**"]
 
 [tool.ruff.format]
 quote-style = "double"
@@ -14,9 +63,34 @@ indent-style = "space"
 docstring-code-format = true
 
 [tool.ruff.lint]
-select = ["D", "W", "E", "F", "B", "I", "ANN"]
-ignore = ["D100", "D104", "D105", "D203", "D205", "D212"]
+select = [
+    "D",  # pydocstyle (docstring rules)
+    "W",  # pycodestyle warnings (less severe style violations)
+    "E",  # pycodestyle errors (style violations considered errors)
+    "F",  # pyflakes (logic and correctness issues)
+    "B",  # flake8-bugbear (common pitfalls and likely bugs)
+    "I",  # isort (import sorting rules)
+    "ANN",  # flake8-annotations (type annotation enforcement)
+    "ASYNC",  # flake8-async (async/await correctness)
+    "S",  # flake8-bandit (security checks)
+]
+ignore = [
+    "D100",  # missing docstring in public module
+    "D104",  # missing docstring in public package
+    "D105",  # missing docstring in magic (dunder) method
+    "D203",  # 1 blank line before class docstring
+    "D205",  # 1 blank line required between summary and description
+    "D212",  # multi-line docstring summary should start on first line
+]
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401", "F402"]
-"test_*.py" = ["D", "ANN", "E501"]
+"__init__.py" = [
+    "F401",  # imported but unused
+    "E402",  # module level import not at top of file
+]
+"test_*.py" = [
+    "D",  # we don't care about docstring in test files
+    "ANN",  # annotations not needed in tests
+    "S",  # why should we have security linting on tests?..
+    "E501",  # no line is too long in tests!
+]

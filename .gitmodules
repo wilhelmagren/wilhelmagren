@@ -1,0 +1,33 @@
+[submodule "nvim/.config/nvim/pack/plugins/start/cmp-buffer"]
+	path = nvim/.config/nvim/pack/plugins/start/cmp-buffer
+	url = https://github.com/hrsh7th/cmp-buffer.git
+[submodule "nvim/.config/nvim/pack/plugins/start/cmp-nvim-lsp"]
+	path = nvim/.config/nvim/pack/plugins/start/cmp-nvim-lsp
+	url = https://github.com/hrsh7th/cmp-nvim-lsp.git
+[submodule "nvim/.config/nvim/pack/plugins/start/cmp-path"]
+	path = nvim/.config/nvim/pack/plugins/start/cmp-path
+	url = https://github.com/hrsh7th/cmp-path.git
+[submodule "nvim/.config/nvim/pack/plugins/start/LuaSnip"]
+	path = nvim/.config/nvim/pack/plugins/start/LuaSnip
+	url = https://github.com/L3MON4D3/LuaSnip.git
+[submodule "nvim/.config/nvim/pack/plugins/start/nvim-cmp"]
+	path = nvim/.config/nvim/pack/plugins/start/nvim-cmp
+	url = https://github.com/hrsh7th/nvim-cmp.git
+[submodule "nvim/.config/nvim/pack/plugins/start/nvim-treesitter"]
+	path = nvim/.config/nvim/pack/plugins/start/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git
+[submodule "nvim/.config/nvim/pack/plugins/start/oil.nvim"]
+	path = nvim/.config/nvim/pack/plugins/start/oil.nvim
+	url = https://github.com/stevearc/oil.nvim.git
+[submodule "nvim/.config/nvim/pack/plugins/start/plenary.nvim"]
+	path = nvim/.config/nvim/pack/plugins/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim.git
+[submodule "nvim/.config/nvim/pack/plugins/start/telescope.nvim"]
+	path = nvim/.config/nvim/pack/plugins/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim.git
+[submodule "nvim/.config/nvim/pack/plugins/start/tiny-inline-diagnostic.nvim"]
+	path = nvim/.config/nvim/pack/plugins/start/tiny-inline-diagnostic.nvim
+	url = https://github.com/rachartier/tiny-inline-diagnostic.nvim.git
+[submodule "nvim/.config/nvim/pack/colorschemes/start/rose-pine"]
+	path = nvim/.config/nvim/pack/colorschemes/start/rose-pine
+	url = https://github.com/rose-pine/neovim.git
